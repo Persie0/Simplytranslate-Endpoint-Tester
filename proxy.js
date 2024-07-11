@@ -40,7 +40,7 @@ async function testTranslationAPIs() {
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(() => {
         reject(new Error(`Request ${index} to ${url} timed out`));
-      }, 1500); // 1.5 seconds timeout
+      }, 2500); // 2.5 seconds timeout
     });
 
     try {
@@ -83,8 +83,8 @@ async function testTranslationAPIs() {
   console.log(`All requests completed in ${totalTimeTaken}ms.`);
 
   return {
-    simply: workingSimply,
-    lingva: workingLingva
+    simply: workingSimply.map(result => new URL(result.url).origin + "/"),
+    lingva: workingLingva.map(result => new URL(result.url).origin + "/")
   };
 }
 
