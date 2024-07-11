@@ -85,9 +85,6 @@ async function testTranslationAPIs() {
   };
 }
 
-
-
-
 app.get('/getWorkingInstances', async (req, res) => {
   try {
     const workingInstance = await testTranslationAPIs();
