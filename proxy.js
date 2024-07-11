@@ -10,10 +10,12 @@ app.use(express.json());
 const simply_base_url = [
   'https://simplytranslate.org/',
   'https://translate.northboot.xyz/',
-  'https://sptl.ggtyler.dev/api/',
-  'https://t.opnxng.com/api/',
+  'https://sptl.ggtyler.dev/',
+  'https://t.opnxng.com/',
   'https://simplytranslate.pussthecat.org/',
-  'https://translate.slipfox.xyz/api/',
+  'https://translate.slipfox.xyz/',
+  "https://translate.tiekoetter.com/",
+  "https://trap.her.st/",
 ];
 
 const simply = simply_base_url.map(base => `${base}api/translate/?engine=google&from=en&to=de&text=`);
@@ -83,9 +85,12 @@ async function testTranslationAPIs() {
   };
 }
 
+
+
+
 app.get('/getWorkingInstances', async (req, res) => {
   try {
-    const workingInstance = await findWorkingTranslationAPI();
+    const workingInstance = await testTranslationAPIs();
     if (workingInstance) {
       res.json({ workingInstance });
     } else {
