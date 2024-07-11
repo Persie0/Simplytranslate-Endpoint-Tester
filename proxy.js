@@ -25,6 +25,7 @@ const lingva_base_url = [
   "https://lingva.garudalinux.org/",
     "https://lingva.lunar.icu/",
     "https://translate.plausibility.cloud/",
+    "https://lingva.ml/"
   ];
 
 const lingva = lingva_base_url.map(base => `${base}api/v1/en/de/`);
