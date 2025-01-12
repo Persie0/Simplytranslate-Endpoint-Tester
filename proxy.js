@@ -34,6 +34,8 @@ const lingva = lingva_base_url.map(base => `${base}api/v1/en/de/`);
 
 
 async function testTranslationAPIs() {
+  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  console.log('Client IP:', ip); // Log the IP address
   const startTime = Date.now(); // Record the start time
 
   const testAPI = async (url, index, type) => {
