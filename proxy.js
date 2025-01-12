@@ -90,8 +90,6 @@ async function testTranslationAPIs() {
 }
 
 app.get('/getWorkingInstances', async (req, res) => {
-  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  console.log('Client IP:', ip); // Log the IP address
   try {
     const workingInstance = await testTranslationAPIs();
     if (workingInstance) {

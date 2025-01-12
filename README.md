@@ -2,32 +2,13 @@
 
 This project is an API that returns working instances of SimplyTranslate and Lingva translation services.
 
-## Free public API endpoint
-Make a GET request to:
+Host your own FREE API endpoint:
 
-https://simplytranslate-api-tester.vercel.app/getWorkingInstances
-
-The API will return a JSON response with working instances of SimplyTranslate and Lingva translation services. For example:
-```
-{
-"workingInstance": {
-      "simply": [
-         "https://simplytranslate.org/",
-         "https://translate.northboot.xyz/",
-         "https://sptl.ggtyler.dev/",
-      ],
-      "lingva": [
-         "https://lingva.lunar.icu/",
-         "https://lingva.nezumi.party/",
-         "https://lingva.nirn.quest/"
-      ]
-   }
-}
-```
-
-## Deploy an endpoint to Vercel yourself
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/Persie0/simplytranslate_api_tester)
 
+
+## Free public API endpoint
+Due to excessive usage and misuse, the public instance is now closed. However, you can easily deploy your own instance.
 
 ## Description
 
