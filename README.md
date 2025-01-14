@@ -31,9 +31,9 @@ To run the API tester locally:
    node proxy.js
    ```
 
-2. Make a GET request to the `/getWorkingInstances` endpoint:
+2. Make a GET request to the `/` endpoint:
    ```
-   http://localhost:3000/getWorkingInstances
+   http://localhost:3000/
    ```
 
 The API will return a JSON response with working instances of SimplyTranslate and Lingva translation services. For example:
